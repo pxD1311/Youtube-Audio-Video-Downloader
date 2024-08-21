@@ -1,4 +1,5 @@
 from terminal_app import TerminalApp
+from misc_funcs import video_confirmation
 
 links = []
 
@@ -8,22 +9,17 @@ while True:
     tapp.display_options()
     user_input = int(input("Enter your choice :"));
     match user_input:
-        case 1:
+        case 1:#insert links into the list
             tapp.insert_link(links)
-        case 2:
-            video_confirmation = input("Enter (V)ideo , (A)udio :")
-            if video_confirmation not in ['y', 'Y', 'Yes', 'YES', 'yes', 'YeS', 'yEs', 'YEs', 'yES', 'yeS']:
-                video_confirmation = True
-            else:
-                video_confirmation = False
-            tapp.download_all_links(video_confirmation)
-        case 3:
-            video_confirmation = input("Enter (V)ideo , (A)udio :")
-            if video_confirmation not in ['y', 'Y', 'Yes', 'YES', 'yes', 'YeS', 'yEs', 'YEs', 'yES', 'yeS']:
-                video_confirmation = True
-            else:
-                video_confirmation = False
+        case 2:#download all links in list
+            tapp.download_all_links(video_confirmation())
+        case 3:#download a single video
             link = input("Enter link :")
-            tapp.download(link, video_confirmation)
-        case _:
+            tapp.download(link, video_confirmation())
+        case 4:
+            pass
+        case 5:
+            print("Thanks for using the application.")
+            quit()
+        case _:#default case
             print(f"Invalid Input : {user_input}, Please try again.");

@@ -5,7 +5,7 @@ class TerminalApp:
         downloader = DowloadYT()
         self.link_list = []
 
-    def display_options():
+    def display_options(self):
         print("Welcome to Youtube audio/video downloader!")
         print("What would you like to do?")
         print("(1) Enter a link inside the list.")

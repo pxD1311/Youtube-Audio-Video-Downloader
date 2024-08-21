@@ -2,6 +2,8 @@ import os
 from pytube import YouTube
 from rich.progress import track
 
+#Will need to change for better implementation
+#Works correctly for now
 class DowloadYT:
     def __init__(self, path : str = "", folder_name : str = "Downloads") -> None:
         if os.path.exists(path):
