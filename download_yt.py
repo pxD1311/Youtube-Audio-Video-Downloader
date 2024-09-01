@@ -27,7 +27,7 @@ class DownloadYT:
                 print(f"Error : {e}")
             return False
 
-    def download_video(self, link : str, resolution : str) ->bool|None:
+    def download_video(self, link : str, resolution = "720p") ->bool|None:
         """
             uses internal __download method to download a given yt video
         """
@@ -38,7 +38,7 @@ class DownloadYT:
             video = yt_obj.streams.get_highest_resolution()
         return self.__download(video)
 
-    def download_audio(self, link : str, audio_quality : str) ->bool|None:
+    def download_audio(self, link : str, audio_quality =  "128kbps") ->bool|None:
         """
         uses internal __download method to download a given yt video
         """

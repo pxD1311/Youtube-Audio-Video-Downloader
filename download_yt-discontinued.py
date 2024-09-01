@@ -92,3 +92,5 @@ class DowloadYT:
 
 
 
+a = DowloadYT()
+a.download_video("https://www.youtube.com/watch?v=NKHzcXwTdB4")
