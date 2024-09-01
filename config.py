@@ -1,7 +1,7 @@
 from os import getcwd
 from os.path import join
 
-VERSION = "1.3-A"
+VERSION = "1.4-A"
 DEVELOPER_MODE = True
 
 DEFAULT_DOWNLOAD_PATH = join(getcwd(), "Downloads")
